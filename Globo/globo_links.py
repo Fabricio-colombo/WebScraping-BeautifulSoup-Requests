@@ -16,7 +16,6 @@ if response.status_code == 200:
     soup = BeautifulSoup(response.content, 'html.parser')
     all_links = soup.find_all('a')
     
-    # Listar todos os href da página
     for link in all_links:
         href = link.get('href')
         if href:
